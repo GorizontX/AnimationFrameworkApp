@@ -10,11 +10,25 @@ import SpringAnimation
 
 class ViewController: UIViewController {
 
+    // MARK: - IB Outlet
+    @IBOutlet var springAnimationView: SpringView!
+    @IBOutlet var presetLabel: UILabel!
+    @IBOutlet var curveLabel: UILabel!
+    @IBOutlet var forceLabel: UILabel!
+    @IBOutlet var durationLabel: UILabel!
+    @IBOutlet var delayLabel: UILabel!
+    
+    @IBOutlet var nextAnimationButton: SpringButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        springAnimationView.layer.cornerRadius = 9
+        nextAnimationButton.layer.cornerRadius = 9
     }
 
-
+    // MARK: - IB Actions
+    @IBAction func runNextAnimation(_ sender: SpringButton) {
+    }
+    
 }
 
