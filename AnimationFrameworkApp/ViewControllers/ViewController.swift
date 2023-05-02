@@ -28,6 +28,15 @@ class ViewController: UIViewController {
 
     // MARK: - IB Actions
     @IBAction func runNextAnimation(_ sender: SpringButton) {
+        springAnimationView.animation = "pop"
+        springAnimationView.curve = "easeIn"
+        springAnimationView.force = 1.5
+        springAnimationView.duration = 2
+        springAnimationView.delay = 0.3
+        springAnimationView.animate()
+        
+        
+        
     }
     
 }
