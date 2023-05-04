@@ -15,6 +15,7 @@
 		570F55682A006A3B0053A5D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570F55662A006A3B0053A5D9 /* LaunchScreen.storyboard */; };
 		570F55712A006C970053A5D9 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 570F55702A006C970053A5D9 /* SpringAnimation */; };
 		570F55752A015C780053A5D9 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F55742A015C780053A5D9 /* Animation.swift */; };
+		57E275712A041FB600AC08C2 /* AnimationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E275702A041FB600AC08C2 /* AnimationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		570F55672A006A3B0053A5D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		570F55692A006A3B0053A5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		570F55742A015C780053A5D9 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		57E275702A041FB600AC08C2 /* AnimationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				570F555B2A006A390053A5D9 /* AppDelegate.swift */,
 				570F555D2A006A390053A5D9 /* SceneDelegate.swift */,
 				570F55732A006D4D0053A5D9 /* ViewControllers */,
+				570F55762A0161A10053A5D9 /* Models */,
 				570F55722A006D3F0053A5D9 /* Storyboards */,
 				570F55642A006A3B0053A5D9 /* Assets.xcassets */,
 				570F55692A006A3B0053A5D9 /* Info.plist */,
@@ -83,9 +86,17 @@
 			isa = PBXGroup;
 			children = (
 				570F555F2A006A390053A5D9 /* ViewController.swift */,
-				570F55742A015C780053A5D9 /* Animation.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		570F55762A0161A10053A5D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				570F55742A015C780053A5D9 /* Animation.swift */,
+				57E275702A041FB600AC08C2 /* AnimationData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				570F55602A006A390053A5D9 /* ViewController.swift in Sources */,
+				57E275712A041FB600AC08C2 /* AnimationData.swift in Sources */,
 				570F555C2A006A390053A5D9 /* AppDelegate.swift in Sources */,
 				570F55752A015C780053A5D9 /* Animation.swift in Sources */,
 				570F555E2A006A390053A5D9 /* SceneDelegate.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SpringAnimation
 
 struct Animation {
     let present: String
@@ -14,9 +15,11 @@ struct Animation {
     let duration: Double
     let delay: Double
     
+    let animationName = AnimationData()
+    
     static func getAnimation() -> Animation {
         Animation(
-            present: <#T##String#>,
+            present: ,
             curve: <#T##String#>,
             force: <#T##Double#>,
             duration: <#T##Double#>,
