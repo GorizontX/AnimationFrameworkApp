@@ -80,7 +80,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="1gU-bD-OxX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="12Q-dC-olb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s2a-ZI-ZVr" secondAttribute="bottom" multiplier="1.2" id="CmP-sq-XJ0"/>
@@ -91,7 +91,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="curveLabel" destination="Oxe-UQ-X9d" id="u8O-ZX-8Tc"/>
+                        <outlet property="curveLabel" destination="Pri-FM-xf9" id="G0B-ji-e7E"/>
                         <outlet property="delayLabel" destination="e1t-lx-sdz" id="ICz-VS-l7c"/>
                         <outlet property="durationLabel" destination="LsS-9c-e0L" id="Xbh-Sb-HUe"/>
                         <outlet property="forceLabel" destination="9xI-EX-GYW" id="r7T-VG-aDg"/>
@@ -106,8 +106,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

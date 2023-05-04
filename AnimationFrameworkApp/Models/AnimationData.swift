@@ -42,6 +42,7 @@ class AnimationData {
         .zoomIn,
         .zoomOut
     ]
+    
     let animationCurves: [AnimationCurve] = [
         .easeIn,
         .easeInOutBack,

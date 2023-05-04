@@ -9,7 +9,7 @@ import UIKit
 import SpringAnimation
 
 class ViewController: UIViewController {
-
+    
     // MARK: - IB Outlet
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var presetLabel: UILabel!
@@ -20,15 +20,15 @@ class ViewController: UIViewController {
     
     @IBOutlet var nextAnimationButton: SpringButton!
     
-    private let animation = Animation.getAnimation()
+    private var animation = Animation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         springAnimationView.layer.cornerRadius = 9
         nextAnimationButton.layer.cornerRadius = 9
-        setViewTitle()
+        setTitles()
     }
-
+    
     // MARK: - IB Actions
     @IBAction func runNextAnimation(_ sender: SpringButton) {
         springAnimationView.animation = animation.present
@@ -37,15 +37,18 @@ class ViewController: UIViewController {
         springAnimationView.duration = animation.duration
         springAnimationView.delay = animation.delay
         springAnimationView.animate()
+        
     }
 }
 
+// MARK: - Extensions
 extension ViewController {
-    func setViewTitle() {
-        presetLabel.text = animation.present
-        curveLabel.text = animation.curve
-        forceLabel.text = (String(format: "%.02f", animation.force))
-        durationLabel.text = (String(format: "%.02f", animation.duration))
-        delayLabel.text = (String(format: "%.02f", animation.delay))
+    func setTitles() {
+        presetLabel.text = "Preset: \(animation.present)"
+        curveLabel.text = "Curve: \(animation.curve)"
+        forceLabel.text = "Force: " + (String(format: "%.02f", animation.force))
+        durationLabel.text = "Duration: " +  (String(format: "%.02f", animation.duration))
+        delayLabel.text = "Deley: " +  (String(format: "%.02f", animation.delay))
+        nextAnimationButton.setTitle("Run: \(animation.present)", for: .normal)
     }
 }

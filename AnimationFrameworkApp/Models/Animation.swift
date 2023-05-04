@@ -15,8 +15,6 @@ struct Animation {
     let duration: Double
     let delay: Double
     
-    
-    
     static func getAnimation() -> Animation {
         Animation(
             present: AnimationData.shared.animationNames.randomElement()?.rawValue ?? "",
