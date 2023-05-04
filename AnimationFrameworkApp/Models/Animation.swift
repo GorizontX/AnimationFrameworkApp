@@ -15,15 +15,15 @@ struct Animation {
     let duration: Double
     let delay: Double
     
-    let animationName = AnimationData()
+    
     
     static func getAnimation() -> Animation {
         Animation(
-            present: ,
-            curve: <#T##String#>,
-            force: <#T##Double#>,
-            duration: <#T##Double#>,
-            delay: <#T##Double#>
+            present: AnimationData.shared.animationNames.randomElement()?.rawValue ?? "",
+            curve: AnimationData.shared.animationCurves.randomElement()?.rawValue ?? "",
+            force: Double.random(in: 0.01...1),
+            duration: Double.random(in: 0.01...1),
+            delay: Double.random(in: 0...1)
         )
     }
 }

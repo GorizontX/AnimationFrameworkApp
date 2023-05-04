@@ -10,6 +10,8 @@ import SpringAnimation
 
 class AnimationData {
     
+    static let shared = AnimationData()
+    
     let animationNames: [AnimationPreset] =
     [
         .fadeIn,
@@ -74,4 +76,6 @@ class AnimationData {
         .linear,
         .spring
     ]
+    
+    private init() {}
 }

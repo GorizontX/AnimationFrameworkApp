@@ -20,24 +20,32 @@ class ViewController: UIViewController {
     
     @IBOutlet var nextAnimationButton: SpringButton!
     
+    private let animation = Animation.getAnimation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         springAnimationView.layer.cornerRadius = 9
         nextAnimationButton.layer.cornerRadius = 9
+        setViewTitle()
     }
 
     // MARK: - IB Actions
     @IBAction func runNextAnimation(_ sender: SpringButton) {
-        springAnimationView.animation = "pop"
-        springAnimationView.curve = "easeIn"
-        springAnimationView.force = 1.5
-        springAnimationView.duration = 2
-        springAnimationView.delay = 0.3
+        springAnimationView.animation = animation.present
+        springAnimationView.curve = animation.curve
+        springAnimationView.force = animation.force
+        springAnimationView.duration = animation.duration
+        springAnimationView.delay = animation.delay
         springAnimationView.animate()
-        
-        
-        
     }
-    
 }
 
+extension ViewController {
+    func setViewTitle() {
+        presetLabel.text = animation.present
+        curveLabel.text = animation.curve
+        forceLabel.text = (String(format: "%.02f", animation.force))
+        durationLabel.text = (String(format: "%.02f", animation.duration))
+        delayLabel.text = (String(format: "%.02f", animation.delay))
+    }
+}
